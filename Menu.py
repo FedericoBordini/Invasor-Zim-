@@ -2,7 +2,7 @@
 import pilasengine
 
 def iniciar_invacion():
-    print("iniciar invasion")
+    print("iniciar invacion")
 
 def opciones_del_juego():
     print("opciones del juego...")
@@ -12,7 +12,6 @@ def salir_del_juego():
 
 
 pilas = pilasengine.iniciar()
-
 
 pilas.actores.Menu(
         [
@@ -28,4 +27,6 @@ texto.x = 20
 texto.y = 100
 texto.color = pilas.colores.Color(0, 255, 0)
 texto.escala = 3
+fondo.imagen.repetir_vertical = True
+fondo.imagen.repetir_horizontal = True
 pilas.ejecutar()
