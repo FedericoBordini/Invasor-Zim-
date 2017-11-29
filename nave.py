@@ -3,7 +3,7 @@ import pilasengine
 # import pilasengine
 pilas = pilasengine.iniciar()
 
-class Nave(pilasengine.actores.Actor):
+class NaveZim(pilasengine.actores.Actor):
 
     def iniciar(self, x=0, y=-190):
 

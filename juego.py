@@ -2,7 +2,7 @@
 import pilasengine
 
 from fondo import Fondo
-from nave import Nave
+from nave import NaveZim
 from enemigos import Enemigos
 
 
@@ -25,7 +25,7 @@ pilas.tareas.siempre(0.65, crear_enemigo)
 #----------------------------------------------------------------
 
 # Crear NAVE------------------------------------------------------
-nave = Nave(pilas)
+nave = NaveZim(pilas)
 nave.aprender(pilas.habilidades.LimitadoABordesDePantalla)
 nave.escala = 0.2
 nave.definir_enemigos(enemigos, puntaje.aumentar)
@@ -44,7 +44,7 @@ def perder(nave, enemigos):
 
 pilas.colisiones.agregar(nave, enemigos, perder)
 
-pilas.actores.vincular(Nave)
+pilas.actores.vincular(NaveZim)
 pilas.actores.vincular(Enemigos)
 
 pilas.ejecutar()
